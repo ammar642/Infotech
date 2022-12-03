@@ -1,0 +1,154 @@
+@import "navbar.css";
+#service{
+    padding:50px 0;
+    background:#f9f9f9;
+}
+#service > .heading{
+    font-size:40px;
+    font-weight:500;
+    color: #1b1b1b;
+    width:fit-content;
+    margin:0 auto 10px auto;
+    position:relative;
+}
+#service > .heading:before{
+    content:'';
+    width:80px;
+    height:3px;
+    background:grey;
+    position:absolute;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+#service > .text{
+    margin-top:40px;
+    font-size:18px;
+    color:grey;
+    padding-inline:30px;
+    text-align:center;  
+}
+#service .container{
+    margin-top:30px;
+    padding:50px 50px;
+    display:grid;
+    grid-template-columns:repeat(4 ,  1fr);
+    grid-template-rows:auto;
+    column-gap:5px;
+}
+#service .container .box{
+    border-bottom:5px solid var(--mainColor);
+    text-align:left;
+    box-sizing:border-box;
+    padding-top:40px;
+    padding-left:30px;
+    padding-right:20px;
+    padding-bottom:80px;
+    position:relative;
+    transition:all 0.3s ease;
+}
+#service .container .box:before{
+    content:'';
+    background:var(--mainColor);
+    height:0;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    transition:all 0.3s ease;
+}
+#service .container .box .box-img{
+    font-size:45px;
+    color:grey;
+    transition:all 0.3s ease;
+}
+#service .container .box .heading{
+    font-size:27px;
+    margin-top:10px;
+    color:#1b1b1b;
+    font-weight:500;
+    margin-bottom:30px;
+    transition:all 0.3s ease;
+}
+#service .container .box .text{
+    margin-top:20px;
+    font-size:17px;
+    color:grey;
+    text-transform:capitalize;
+}
+#service .container .box:hover{
+    background:white;
+}
+#service .container .box:hover .heading{
+    color:var(--mainColor);
+}
+#service .container .box:hover .box-img{
+    color:var(--mainColor);
+}
+#service .container  .box:hover .box .text{
+    color:var(--mainColor);
+}
+#service .container .box:hover:before{
+    height:30px;
+}
+/* responsive starts here */
+@media screen and (max-width:1150px){
+    #service .container{
+        grid-template-columns:repeat(3 , 1fr);
+        grid-template-rows:repeat(2, 1fr);
+        row-gap:30px;
+    }
+    #service .container .box:nth-child(4){
+        grid-column-start:2;
+    }
+}
+@media screen and (max-width:1020px){
+    #service .container{
+        margin-left:30px;
+        grid-template-columns:repeat(2,400px);
+    }
+}
+@media screen and (max-width:938px){
+    #service .container{
+        margin-left:0;
+    }
+}
+@media screen and (max-width:870px){
+    #service .container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width:720px){
+    #service .container{
+        justify-content:center;
+        grid-template-columns:430px;
+        grid-template-rows:repeat(4 ,1fr);
+    }
+    #service > .heading{
+        font-size:35px;
+    }
+    #service > .text {
+        font-size:15px;
+    }
+    #service .container .box{
+        grid-column-start:1 !important;
+    }
+}
+@media screen and (max-width:500px){
+    #service .container{
+        grid-template-columns:1fr;
+    }
+    #service > .heading{
+        font-size:30px;
+    }   
+}
+@media screen and (max-width:440px){
+    #service .container{
+        padding-inline:30px;
+    }
+}
+@media screen and (max-width:370px){
+    #service .container{
+        padding-inline:15px;
+    }
+}

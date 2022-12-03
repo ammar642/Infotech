@@ -1,0 +1,132 @@
+@import "navbar.css";
+#contact{
+    padding:50px 0 0 0;
+}
+#contact .container{
+    padding-inline:50px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-bottom:100px;
+}
+#contact .container .column{
+    background:rgba(0,0,0,0.6);
+    color:white;
+    box-sizing:border-box;
+    padding:30px 15px 30px 40px;
+}
+#contact .container .column-1{
+    box-sizing:border-box;
+    width:40%;
+}
+#contact .container .column-2{
+    flex:1;
+}
+#contact .container .heading{
+    font-size:35px;
+    font-weight:500;
+    margin-bottom:50px;
+}
+#contact .container .column-1 .sub-heading{
+    font-size:25px;
+    font-weight:500;
+    margin:10px 0 20px 0;
+}
+#contact .container .column-1 .text{
+    font-size:16px;
+    margin-bottom:20px;
+    font-weight:400;
+}
+#contact .container input , #contact .container textarea{
+    border:none;
+    outline:none;
+    border:1px solid white;
+    background:transparent;
+    font-size:20px;
+    padding:10px 20px;
+    box-sizing:border-box;
+    width:100%;
+    color:white;
+    margin:15px 0;
+}
+#contact .container .column-2{
+    display:flex;
+    flex-direction:column;
+    padding-right:40px;
+}
+#contact  .container input::placeholder , #contact .container textarea::placeholder{
+    color:white;
+    text-transform:capitalize;
+}
+#contact .container input:focus , #contact .container textarea:focus{
+    border-color:var(--mainColor);
+}
+#contact .container .column-2 input{
+    height:50px;
+}
+#contact .container .column-2 .submit{
+    cursor:pointer;
+    margin-top:10px;
+}
+#contact .container textarea{
+    overflow:hidden;
+    resize:none;
+    height:250px;
+}
+@media screen and (max-width:1000px){
+    #contact .container .column{
+        width:700px;
+        margin:auto;
+    }
+    #contact .container .column-2{
+        flex: 0 1 auto;
+    }
+}
+@media screen and (max-width:600px){
+    #contact .container .heading{
+        font-size:30px;
+    }
+    #contact .container{
+        padding-inline:30px;
+    }
+    #contact .container .column{
+        width:100%;
+    }
+}
+@media screen and (max-width:500px){
+    #contact .container{
+        padding-inline:20px;
+    }
+    #contact .container .column-2{
+        padding-inline:20px;
+    }
+}
+@media screen and (max-width:400px){
+    #contact .container{
+        padding-inline:5px;
+    }
+}
+/* map design starts here */
+#contact .map{
+    padding-inline:50px;
+}
+#contact .map iframe{
+    width:100%;
+    height:500px;
+}
+@media screen and (max-width:700px){
+    #contact .map{
+        padding-inline:30px;
+    }
+}
+@media screen and (max-width:500px){
+    #contact .map{
+        padding-inline:20px;
+    }
+}
+@media screen and (max-width:400px){
+    #contact .map{
+        padding-inline:5px;
+    }
+}

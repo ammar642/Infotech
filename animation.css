@@ -1,0 +1,7 @@
+.boxes , #about .column-1 , #about .column-2 , #service .container, #contact .column-1 , #contact .column-2 {
+    opacity:0;
+}
+.boxes.animate__animated , #about .column-1.animate__animated , , #about .column-1.animate__animated ,
+ #service .container.animate__animated, #contact .column-1.animate__animated , #contact .column-2.animate__animated{
+    opacity:1;
+}
